@@ -3,5 +3,5 @@ installer/capture-image
 installer/tmp
 installer/capture
 installer/*.msi
-.vscode
+.vscode/
 .settings
