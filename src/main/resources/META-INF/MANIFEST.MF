@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.5.4
+Build-Jdk: 16.0.2
+Class-Path: javafx-base-16.jar javafx-base-16-win.jar javafx-graphics-16
+ .jar javafx-graphics-16-win.jar javafx-controls-16.jar javafx-controls-
+ 16-win.jar javafx-fxml-16.jar javafx-fxml-16-win.jar javafx-swing-16.ja
+ r javafx-swing-16-win.jar controlsfx-11.1.0.jar fontawesomefx-commons-9
+ .1.2.jar fontawesomefx-fontawesome-4.7.0-9.1.2.jar fontawesomefx-materi
+ alicons-2.2.0-9.1.2.jar jfoenix-9.0.10.jar jnativehook-2.1.0.jar
+Main-Class: com.s2h.capture.App
+Built-By: soft2help.net
+name: capture
+vendor: soft2help
+teste: testeFromResources
+

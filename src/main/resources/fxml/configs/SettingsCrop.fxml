@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" prefHeight="484.0" prefWidth="550.0" style="-fx-background-color: #3d4956;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.s2h.capture.gui.configs.SettingsCrop">
+   <AnchorPane prefHeight="45.0" prefWidth="552.0" /> 
+      <AnchorPane layoutX="99.0" layoutY="99.0" prefHeight="100.0" prefWidth="550.0" style="-fx-background-color: #3d4956;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+         <children>
+            <TextField fx:id="ip" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="283.0" stylesheets="@../../style/style.css" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="20.0" />
+            <Text fill="WHITE" layoutX="331.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ej: rtsp://user:pass@192.168.1.1">
+               <font>
+                  <Font name="Calibri Italic" size="13.0" />
+               </font>
+            </Text>
+         <JFXCheckBox fx:id="flipHorizontal" checkedColor="#eda678" layoutX="14.0" layoutY="58.0" text="Flip Horizontal" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="cropAreaSettings" layoutY="177.0" prefHeight="158.0" prefWidth="789.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crop Image Settings">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cropUpperLeftX" layoutX="127.0" layoutY="43.0" prefHeight="25.0" prefWidth="89.0" promptText="X" stylesheets="@../../style/style.css" />
+            <ImageView fitHeight="114.0" fitWidth="107.0" layoutX="14.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/subimg.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="cropUpperLeftY" layoutX="231.0" layoutY="43.0" prefHeight="25.0" prefWidth="89.0" promptText="Y" stylesheets="@../../style/style.css" />
+            <TextField fx:id="cropWidth" layoutX="338.0" layoutY="43.0" prefHeight="25.0" prefWidth="89.0" promptText="Width" stylesheets="@../../style/style.css" />
+            <TextField fx:id="cropHeight" layoutX="447.0" layoutY="43.0" prefHeight="25.0" prefWidth="89.0" promptText="Height" stylesheets="@../../style/style.css" />
+         <FontAwesomeIconView fill="WHITE" glyphName="INFO" layoutX="145.0" layoutY="120.0" size="20" wrappingWidth="12.000002264976501" />
+         <TextArea editable="false" layoutX="158.0" layoutY="81.0" prefHeight="64.0" prefWidth="377.0" stylesheets="@../../style/style.css" text="In this area you should put settings&#10;to crop a rectangular area from original image. You should set &#10;initial point X,Y and the width and height from this point" />
+         <JFXButton fx:id="needHelp" layoutX="599.0" layoutY="90.0" onAction="#needHelp" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Need Help?" />
+         <FontAwesomeIconView glyphName="COGS" layoutX="605.0" layoutY="107.0" size="15" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="501.0" prefHeight="128.0" prefWidth="550.0" />
+   <AnchorPane fx:id="selectCropPanel" layoutY="143.0" prefHeight="38.0" prefWidth="789.0" style="-fx-background-color: #3d4956;">
+      <children>
+         <JFXCheckBox fx:id="cropImage" checkedColor="#eda678" layoutX="14.0" layoutY="10.0" text="Crop Image" textFill="WHITE" />
+      </children>
+   </AnchorPane>
+      <AnchorPane fx:id="prespectiveAreaSettings" layoutY="373.0" prefHeight="200.0" prefWidth="550.0" style="-fx-background-color: #3d4956;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="373.0">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crop Prespective  Settings">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/A.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="fromUpperLeftX" layoutX="58.0" layoutY="46.0" prefHeight="25.0" prefWidth="100.0" promptText="From X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="fromUpperLeftY" layoutX="165.0" layoutY="46.0" prefHeight="25.0" prefWidth="100.0" promptText="From Y" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toUpperLeftX" layoutX="326.0" layoutY="46.0" prefHeight="25.0" prefWidth="100.0" promptText="To X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toUpperLeftY" layoutX="436.0" layoutY="46.0" prefHeight="25.0" prefWidth="100.0" promptText="To Y" stylesheets="@../../style/style.css" />
+            <Text fill="WHITE" layoutX="290.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="→" wrappingWidth="12.000002264976501" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/B.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="fromUpperRightX" layoutX="58.0" layoutY="83.0" prefHeight="25.0" prefWidth="100.0" promptText="From X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="fromUpperRightY" layoutX="165.0" layoutY="83.0" prefHeight="25.0" prefWidth="100.0" promptText="From Y" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toUpperRightX" layoutX="326.0" layoutY="83.0" prefHeight="25.0" prefWidth="100.0" promptText="To X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toUpperRightY" layoutX="436.0" layoutY="83.0" prefHeight="25.0" prefWidth="100.0" promptText="To Y" stylesheets="@../../style/style.css" />
+            <Text fill="WHITE" layoutX="290.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="→" wrappingWidth="12.000002264976501" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="153.0">
+               <image>
+                  <Image url="@../../resources/img/C.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="fromDownRightX" layoutX="58.0" layoutY="120.0" prefHeight="25.0" prefWidth="100.0" promptText="From X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="fromDownRightY" layoutX="165.0" layoutY="120.0" prefHeight="25.0" prefWidth="100.0" promptText="From Y" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toDownRightX" layoutX="326.0" layoutY="120.0" prefHeight="25.0" prefWidth="100.0" promptText="To X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toDownRightY" layoutX="436.0" layoutY="120.0" prefHeight="25.0" prefWidth="100.0" promptText="To Y" stylesheets="@../../style/style.css" />
+            <Text fill="WHITE" layoutX="290.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="→" wrappingWidth="12.000002264976501" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/img/D.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="fromDownLeftX" layoutX="58.0" layoutY="157.0" prefHeight="25.0" prefWidth="100.0" promptText="From X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="fromDownLeftY" layoutX="165.0" layoutY="157.0" prefHeight="25.0" prefWidth="100.0" promptText="From Y" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toDownLeftX" layoutX="326.0" layoutY="157.0" prefHeight="25.0" prefWidth="100.0" promptText="To X" stylesheets="@../../style/style.css" />
+            <TextField fx:id="toDownLeftY" layoutX="436.0" layoutY="157.0" prefHeight="25.0" prefWidth="100.0" promptText="To Y" stylesheets="@../../style/style.css" />
+            <Text fill="WHITE" layoutX="290.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="→" wrappingWidth="12.000002264976501" />
+         </children>
+      </AnchorPane>
+   <AnchorPane fx:id="selectPrespectivePanel" layoutY="335.0" prefHeight="38.0" prefWidth="789.0" style="-fx-background-color: #3d4956;">
+      <children>
+         <JFXCheckBox fx:id="prespectiveCorrection" checkedColor="#eda678" layoutX="14.0" layoutY="10.0" text="Prespective Correction" textFill="WHITE" />
+      </children>
+   </AnchorPane>
+   <AnchorPane fx:id="saveSettingsPanel" layoutY="569.0" prefHeight="73.0" prefWidth="789.0" style="-fx-background-color: #3d4956;">
+      <children>
+         <JFXButton fx:id="saveSettings" layoutX="329.0" layoutY="24.0" onAction="#saveSettings" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Save Settings" />
+      </children>
+   </AnchorPane>
+   <fx:include source="../includes/Header.fxml" />
+</AnchorPane>

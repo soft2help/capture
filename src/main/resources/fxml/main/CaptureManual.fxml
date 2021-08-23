@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="475.0" prefWidth="1052.0" style="-fx-background-color: #3d4956;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.s2h.capture.gui.main.CaptureManual">
+   <children>
+      <JFXButton opacity="0.0" prefHeight="1.0" prefWidth="7.0" />
+      <ImageView fx:id="complete" fitHeight="294.0" fitWidth="490.0" layoutX="18.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cropped" fitHeight="294.0" fitWidth="490.0" layoutX="545.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="capture" layoutX="471.0" layoutY="58.0" onAction="#capture" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Capture" />
+      <JFXCheckBox fx:id="flipHorizontal" checkedColor="#eda678" layoutX="456.0" layoutY="98.0" prefHeight="18.0" prefWidth="125.0" text="Flip Horizontal" textFill="#f2efef" />
+      <Line endX="972.25" layoutX="20.0" layoutY="129.0" stroke="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Line endY="300.0" layoutX="530.0" layoutY="149.0" stroke="WHITE" />
+      <AnchorPane layoutX="3.0" layoutY="461.0" prefHeight="1.0" prefWidth="1271.0" style="-fx-background-color: #eee;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TextField fx:id="completePath" editable="false" layoutX="14.0" layoutY="70.0" onMouseClicked="#completeExplorer" prefHeight="37.0" prefWidth="350.0" promptText="Path to image complete" stylesheets="@../../style/style.css" />
+      <TextField fx:id="croppedPath" editable="false" layoutX="625.0" layoutY="70.0" onMouseClicked="#croppedExplorer" prefHeight="37.0" prefWidth="350.0" promptText="Path to image cropped" stylesheets="@../../style/style.css" />
+      <ProgressBar fx:id="progressBarComplete" layoutX="166.0" layoutY="253.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="10.0" prefWidth="168.0" visible="false" />
+      <ProgressBar fx:id="progressBarCropped" layoutX="679.0" layoutY="258.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="10.0" prefWidth="187.0" visible="false" />
+      <fx:include fx:id="header" source="../includes/Header.fxml" translateX="260.0" />
+      <Label layoutX="14.0" layoutY="108.0" prefHeight="17.0" prefWidth="142.0" text="Complete" textFill="WHITE" />
+      <Label layoutX="625.0" layoutY="108.0" prefHeight="17.0" prefWidth="62.0" text="Cropped" textFill="WHITE" />
+   </children>
+</AnchorPane>

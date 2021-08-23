@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="header" onMouseDragged="#moveHeader" onMousePressed="#startDragHeader" prefHeight="15.0" prefWidth="789.0" style="-fx-background-color: #3d4956;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.s2h.capture.gui.includes.Header">
+  <children>
+    <JFXButton fx:id="close" layoutX="1094.0" onAction="#close" prefHeight="43.0" prefWidth="45.0" ripplerFill="#d33636" style="-fx-background-color: #3d4956;" text="X" textFill="WHITE" AnchorPane.rightAnchor="0.0">
+      <font>
+        <Font size="18.0" />
+      </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <stylesheets>           
+            <URL value="@../../style/style.css" />
+         </stylesheets>
+    </JFXButton>
+    <JFXButton fx:id="minimize" alignment="TOP_CENTER" layoutX="1049.0" onAction="#minimize" prefHeight="43.0" prefWidth="45.0" ripplerFill="#3d4956" style="-fx-background-color: #3d4956;" text="_" textFill="WHITE" AnchorPane.rightAnchor="45.0">
+      <font>
+        <Font size="18.0" />
+      </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <stylesheets>            
+            <URL value="@../../style/style.css" />
+         </stylesheets>
+    </JFXButton>
+  </children>
+   <cursor>
+      <Cursor fx:constant="MOVE" />
+   </cursor>
+</AnchorPane>

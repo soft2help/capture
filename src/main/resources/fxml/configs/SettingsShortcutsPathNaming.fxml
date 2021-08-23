@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="813.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.s2h.capture.gui.configs.SettingsShortcutsPathNaming">
+   <children>
+      <AnchorPane layoutX="96.0" layoutY="113.0" prefHeight="702.0" prefWidth="789.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+         <children>
+            <AnchorPane layoutX="37.0" layoutY="44.0" prefHeight="242.0" prefWidth="789.0" style="-fx-background-color: #3d4956;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXCheckBox fx:id="captureAll" checkedColor="#eda678" layoutX="17.0" layoutY="33.0" prefHeight="30.0" prefWidth="281.0" selected="true" text="Capture All" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <TextField fx:id="captureAllKey" editable="false" layoutX="17.0" layoutY="80.0" onKeyReleased="#asignCaptureAllKey" prefHeight="30.0" prefWidth="359.0" promptText="Keyboard Key" stylesheets="@../../style/style.css" text="F10" />
+                  <TextField fx:id="captureAllSavePath" editable="false" layoutX="17.0" layoutY="135.0" onMouseReleased="#asignCaptureAllPath" prefHeight="30.0" prefWidth="359.0" promptText="Path" stylesheets="@../../style/style.css" />
+                  <TextField fx:id="captureAllNameComplete" layoutX="17.0" layoutY="190.0" prefHeight="30.0" prefWidth="170.0" promptText="Prefix Capture Complete" stylesheets="@../../style/style.css" text="Complete_" />
+                  <TextField fx:id="captureAllNameCropped" layoutX="206.0" layoutY="190.0" prefHeight="30.0" prefWidth="170.0" promptText="Prefix Cropped Capture" stylesheets="@../../style/style.css" text="Cropped_" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="242.0" prefWidth="789.0" style="-fx-background-color: #3d4956;" AnchorPane.topAnchor="230.0">
+               <children>
+                  <JFXCheckBox fx:id="captureComplete" checkedColor="#eda678" layoutX="18.0" layoutY="38.0" prefHeight="30.0" prefWidth="281.0" selected="true" text="Capture Complete" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Line endX="611.0" layoutX="118.0" layoutY="21.0" startX="-100.0" stroke="WHITE" />
+                  <TextField fx:id="captureCompleteKey" editable="false" layoutX="17.0" layoutY="80.0" onKeyReleased="#asignCaptureCompleteKey" prefHeight="30.0" prefWidth="359.0" promptText="Keyboard Key" stylesheets="@../../style/style.css" text="F10" />
+                  <TextField fx:id="captureCompleteSavePath" editable="false" layoutX="17.0" layoutY="135.0" onMouseReleased="#asignCaptureCompletePath" prefHeight="30.0" prefWidth="359.0" promptText="Path" stylesheets="@../../style/style.css" AnchorPane.topAnchor="135.0" />
+                  <TextField fx:id="captureCompleteName" layoutX="17.0" layoutY="190.0" prefHeight="30.0" prefWidth="359.0" promptText="Prefix Capture Complete" stylesheets="@../../style/style.css" text="Complete_" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="252.0" prefHeight="234.0" prefWidth="789.0" style="-fx-background-color: #3d4956;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="460.0">
+               <children>
+                  <JFXCheckBox fx:id="captureCropped" checkedColor="#eda678" layoutX="14.0" layoutY="41.0" prefHeight="30.0" prefWidth="281.0" selected="true" text="Capture Cropped" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Line endX="625.0" layoutX="118.0" layoutY="22.0" startX="-100.0" stroke="WHITE" />
+                  <TextField fx:id="captureCroppedKey" editable="false" layoutX="17.0" layoutY="80.0" onKeyReleased="#asignCaptureCroppedKey" prefHeight="30.0" prefWidth="359.0" promptText="Keyboard Key" stylesheets="@../../style/style.css" text="F10" />
+                  <TextField fx:id="captureCroppedSavePath" editable="false" layoutX="17.0" layoutY="135.0" onMouseReleased="#asignCaptureCroppedPath" prefHeight="30.0" prefWidth="359.0" promptText="Path" stylesheets="@../../style/style.css" AnchorPane.topAnchor="135.0" />
+                  <TextField fx:id="captureCroppedName" layoutX="17.0" layoutY="190.0" prefHeight="30.0" prefWidth="359.0" promptText="Prefix Cropped Capture" stylesheets="@../../style/style.css" text="Cropped_" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="735.0" prefHeight="81.0" prefWidth="789.0" style="-fx-background-color: #3d4956;" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="735.0">
+         <children>
+            <JFXButton fx:id="saveSettings" layoutX="329.0" layoutY="28.0" onAction="#saveSettings" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Save Settings" />
+         </children>
+      </AnchorPane>
+      <fx:include source="../includes/Header.fxml" />
+   </children>
+   <effect>
+      <InnerShadow choke="0.03" height="4.5" radius="1.75" width="4.5" />
+   </effect>
+</AnchorPane>

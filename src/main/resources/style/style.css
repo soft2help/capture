@@ -1,0 +1,130 @@
+#close:hover{     
+  -fx-background-color: #e07373;
+}
+
+#close{     
+  -fx-background-color: #3d4956;
+}
+
+#min:hover{     
+  -fx-background-color: #bfbfbf;
+}
+
+#min{     
+  -fx-background-color: #3d4956;
+}
+
+.button{    
+  -fx-background-color: #f4f4f4;
+}
+
+.button:hover{
+  -fx-background-color: #eee;
+    
+}
+
+.textfield{
+  -fx-background-color: transparent;
+    
+}
+
+.text-area {
+  -fx-text-fill: white;
+  text-area-background: #3d4956 ;
+}
+
+.text-area .content {
+  -fx-background-color: text-area-background;
+}
+
+
+.text-field {
+  -fx-background-color: #fdf8f5 , #3d4956 , #3d4956;
+  -fx-background-insets: 0 0 -1 0, 0 0 0 0, 0 -1 0 -1;
+  -fx-text-fill: #fff;
+}
+
+.text-field:focused {
+  -fx-background-color: #eda678 , #3d4956 , #3d4956;
+  -fx-background-insets: 0 0 -1 0, 0 0 0 0, 0 -1 0 -1;
+}
+
+.errorInput{
+  -fx-background-color: rgb(231, 33, 33) , #3d4956 , #3d4956;
+  -fx-background-insets: 0 0 -1 0, 0 0 0 0, 0 -1 0 -1;
+}
+
+.tick{
+    -fx-opacity: 0.4;
+}
+
+.tick:hover{
+    -fx-opacity: 1;
+}
+
+.notification-bar>.pane {
+    -fx-background-color: rgba(0,0,0, .8);
+    -fx-padding: 5 5 5 5;
+    -fx-background-insets: 0, 1, 2;
+    -fx-border-color: rgba(255,255,255, .9);
+}
+
+.notification-bar>.pane .title {
+    -fx-font-size: 1.8em;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: rgba(200,200,200, .8);
+    -fx-margin: 5px 0px 15px 0px;
+    -fx-padding: 5px 0 0 0;
+
+}
+
+.notification-bar>.pane .label {
+    -fx-font-size: 1.2em;
+    -fx-text-fill: #eee;
+    -fx-alignment: top-left;
+    -fx-padding: 5px 0 0 15px;
+}
+
+/******************************************************************************
+ *
+ * Close button
+ *
+ *****************************************************************************/
+
+.notification-bar>.pane .close-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0 0 0 0;
+    -fx-alignment: center;
+}
+
+.notification-bar > .pane .close-button:hover {
+     -fx-background-color: linear-gradient(#a3a3a3, #8b8b8b 34%, #777777 36%, #777777 63%, #8b8b8b 65%, #adadad);
+}
+
+.notification-bar>.pane .close-button:pressed {
+     -fx-background-color: linear-gradient(#a3a3a3, #8b8b8b 34%, #777777 36%, #777777 63%, #8b8b8b 65%, #adadad);
+
+}
+
+.notification-bar>.pane .close-button>.graphic {
+     -fx-background-color: #fff;
+     -fx-scale-shape: false;
+     -fx-padding: 4.5 4.5 4.5 4.5; /* Graphic is 9x9 px */
+}
+
+.notification-bar>.pane .close-button:hover>.graphic {
+     -fx-background-color: #fff;
+}
+
+.notification-bar>.pane .close-button:pressed>.graphic {
+     -fx-background-color: #fff;
+}
+
+.notification-bar>.pane .close-button>.graphic {
+     -fx-shape:
+    "M395.992,296.758l1.794-1.794l7.292,7.292l-1.795,1.794 L395.992,296.758z M403.256,294.992l1.794,1.794l-7.292,7.292l-1.794-1.795 L403.256,294.992z";
+}

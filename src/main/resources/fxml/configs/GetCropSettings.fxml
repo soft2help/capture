@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="726.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.s2h.capture.gui.configs.GetCropSettings">
+  <children>
+      <fx:include fx:id="header" source="../includes/Header.fxml" />
+      <AnchorPane fx:id="separator1" prefHeight="17.0" prefWidth="789.0" />
+    <AnchorPane id="anchorPane" fx:id="anchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="571.0" prefWidth="983.0" style="-fx-background-color: #3d4956;" VBox.vgrow="ALWAYS">
+      <children>
+            <Pane id="contenedor" fx:id="contenedor" layoutY="89.0" prefHeight="470.0" prefWidth="983.0" style="-fx-border-color: #eda678; -fx-border-width: 5px;">
+               <children>
+                  <ImageView fx:id="imageViewer" fitHeight="459.0" fitWidth="973.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </ImageView>
+                  <Pane fx:id="drawer" layoutX="5.0" layoutY="5.0" onMouseDragged="#doSelection" onMousePressed="#initSelection" onMouseReleased="#endSelection" prefHeight="459.0" prefWidth="973.0" style="-fx-border-color: #fff; -fx-border-width: 5px;" />
+                  
+               </children>
+            </Pane>
+            <TextField fx:id="txtRtspIpCam" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="485.0" style="-fx-border-radius: 5px;" />
+            <JFXButton fx:id="check" layoutX="507.0" layoutY="14.0" onAction="#check" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #515d6d; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Get Image" textFill="WHITE" />
+            <AnchorPane layoutY="558.0" prefHeight="25.0" prefWidth="983.0" style="-fx-background-color: #fff;" />
+            <JFXCheckBox fx:id="flipHorizontal" checkedColor="#eda678" layoutX="509.0" layoutY="53.0" prefHeight="18.0" prefWidth="125.0" text="Flip Horizontal" textFill="#f2efef" />
+            <ProgressBar fx:id="progressBar" layoutX="633.0" layoutY="53.0" prefHeight="18.0" prefWidth="197.0" />
+            <JFXButton fx:id="saveConfiguration" layoutX="646.0" layoutY="14.0" onAction="#saveConfiguration" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Save Configuration" />
+      </children>
+    </AnchorPane>
+      <AnchorPane prefHeight="104.0" prefWidth="787.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <AnchorPane fx:id="cropPanel" prefHeight="99.0" prefWidth="983.0" style="-fx-border-style: dashed; -fx-border-color: #fff;">
+               <children>
+                  <JFXCheckBox fx:id="prespectiveCorrection" checkedColor="#eda678" layoutX="321.0" layoutY="42.0" prefHeight="18.0" prefWidth="91.0" text="Prespective Correction" textFill="#f2efef" />
+                  <JFXButton fx:id="crop" layoutX="507.0" layoutY="17.0" onAction="#crop" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Crop" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="INFO" layoutX="7.0" layoutY="59.0" size="1em" wrappingWidth="15.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </FontAwesomeIconView>
+                  <Label layoutX="29.0" layoutY="13.0" prefHeight="74.0" prefWidth="247.0" text="With mouse select the points area" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="507.0" layoutY="63.0">
+                     <children>
+                        <JFXButton fx:id="deleteSelection" onAction="#deleteSelection" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #eda678; -fx-background-radius: 5em; -fx-border-radius: 5em;" text="Delete Selection">
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <FontAwesomeIconView fill="#eb0a0a" glyphName="TRASH" layoutX="9.0" layoutY="17.14285659790039" size="15" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

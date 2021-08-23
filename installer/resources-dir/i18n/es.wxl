@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="es-ES" xmlns="http://schemas.microsoft.com/wix/2006/localization" Codepage="1252">
+  <String Id="message.install.dir.exist">La carpeta [INSTALLDIR]ya existe. ¿Desea instalar en esta carpeta de todas las formas?</String>
+  <String Id="MainFeatureTitle">Principales Caracteristicas</String>
+  <String Id="DowngradeErrorMessage">Ya existe una versión de [ProductName] ya instalada. El downgrade está desabilitado. El Setup va a salir ahora.</String>
+  <String Id="DisallowUpgradeErrorMessage">Un versión inferior del [ProductName] ya está instalada. Upgrades está desabilitada. Setup va a salir ahora.</String>
+</WixLocalization>
